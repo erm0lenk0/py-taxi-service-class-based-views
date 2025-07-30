@@ -5,7 +5,7 @@
   <p><strong>manufacturer </strong>{{ car.manufacturer}}</p>
   <div class="ml-3">
     <h3>Drivers</h3>
-    {% for driver in car.driver.all %}
+    {% for driver in car.drivers.all %}
       <br>
       <p class="text-muted">{{ driver.id }}</p>
       <p>{{ driver.license_number }}</p>
