@@ -34,7 +34,7 @@ class CarDetailView(generic.DetailView):
     model = Car
 
 
-class DriverView(generic.ListView):
+class DriverListView(generic.ListView):
     model = Driver
     paginate_by = 5
 

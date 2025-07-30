@@ -8,7 +8,13 @@
       {{ car.model }} ({{ car.manufacturer.name }})</a>
       <br>
       <strong>Drivers:</strong>
-      {{ car.drivers.all|join:", " }}
+      <ul>
+        {% for driver in car.drivers.all %}
+          <li>{{ driver.username }}</li>
+        {% empty %}
+          <li>No drivers assigned</li>
+        {% endfor %}
+      </ul>
     </li>
   {% endfor %}
 {% endblock %}
